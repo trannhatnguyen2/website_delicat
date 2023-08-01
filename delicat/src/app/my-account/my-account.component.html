@@ -1,0 +1,225 @@
+<div class="container__profile">
+  <nav aria-label="breadcrumb" style="padding: 12px 0" class="bg-secondary">
+    <ol class="breadcrumb" style="margin-left: 85px; margin-bottom: 0">
+      <li class="breadcrumb-item"><a href="">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="blog">Account</li>
+    </ol>
+  </nav>
+
+  <div class="profile__cover">
+    <div class="cover__img">
+      <img src="../../assets/img/cover.png" alt="" />
+    </div>
+    <h1 class="cover__title uppercase">my account</h1>
+  </div>
+
+  <div class="profile__content">
+    <div class="content__up" style="margin-bottom: 40px">
+      <h3>Welcome, {{ customerInfo.fullName }}</h3>
+    </div>
+
+    <div class="row content__down">
+      <div class="col-4 content__left">
+        <div class="list-group" id="list-tab" role="tablist">
+          <a
+            class="list-group-item list-group-item-action active"
+            id="list-home-list"
+            data-bs-toggle="list"
+            href="#list-home"
+            role="tab"
+            aria-controls="list-home"
+            >My profile</a
+          >
+          <a
+            class="list-group-item list-group-item-action"
+            id="list-order-list"
+            data-bs-toggle="list"
+            href="#list-order"
+            role="tab"
+            aria-controls="list-order"
+            >My orders</a
+          >
+          <a
+            class="list-group-item list-group-item-action"
+            id="list-password-list"
+            data-bs-toggle="list"
+            href="#list-password"
+            role="tab"
+            aria-controls="list-password"
+            *ngIf="!isGoogleUser"
+            >Change password</a
+          >
+          <a
+            class="list-group-item list-group-item-action"
+            id="list-logout-list"
+            data-bs-toggle="list"
+            href="#list-logout"
+            role="tab"
+            aria-controls="list-logout"
+            >Sign out</a
+          >
+        </div>
+      </div>
+      <div class="col-8 content__right">
+        <div class="tab-content" id="nav-tabContent">
+          <!-- MY PROFILE -->
+          <div
+            class="tab-pane fade show active content__my__profile"
+            id="list-home"
+            role="tabpanel"
+            aria-labelledby="list-home-list"
+          >
+            <form action="#" class="row g-3" id="form_infor" dmethod="POST">
+              <h4>MY PROFILE</h4>
+              <hr />
+              <div class="col-12">
+                <label
+                  for="Username"
+                  class="form-label"
+                  style="font-weight: normal"
+                  ><span style="font-weight: 500; color: black">Username: </span
+                  >{{ customerInfo.userName }}</label
+                >
+              </div>
+              <div class="col-md-10">
+                <label for="inputFullName" class="form-label"
+                  >Full Name <span>*</span></label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputFullName"
+                  [(ngModel)]="customerInfo.fullName"
+                  name="fullName"
+                />
+              </div>
+
+              <div class="col-md-10">
+                <label for="inputMobileNumber" class="form-label"
+                  >Mobile Number <span>*</span></label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputMobileNumber"
+                  [(ngModel)]="customerInfo.phone"
+                  name="phone"
+                />
+              </div>
+
+              <div class="col-md-10">
+                <label for="inputAddress" class="form-label"
+                  >Address <span>*</span></label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputAddress"
+                  [(ngModel)]="customerInfo.address"
+                  name="address"
+                />
+              </div>
+              <div class="form-button col-md-10">
+                <button type="submit" class="btn-save" (click)="saveProfile()">
+                  SAVE
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <!-- ORDERS -->
+          <div
+            class="tab-pane fade"
+            id="list-order"
+            role="tabpanel"
+            aria-labelledby="list-order-list"
+          >
+            <h4>MY ORDERS</h4>
+            <hr />
+            <div style="margin-top: 30px">
+              <app-order-item
+                *ngFor="let item of customerInfo.order"
+                [orderId]="item"
+              ></app-order-item>
+            </div>
+          </div>
+
+          <!-- CHANGE PASSWORD -->
+          <div
+            class="tab-pane fade"
+            id="list-password"
+            role="tabpanel"
+            aria-labelledby="list-password-list"
+            *ngIf="!isGoogleUser"
+          >
+            <form action="#" class="row g-3" id="form_infor" dmethod="POST">
+              <h4>CHANGE PASSWORD</h4>
+              <hr />
+              <div class="col-md-10">
+                <label for="inputCurrentPassword" class="form-label"
+                  >Old password <span>*</span></label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputCurrentPassword"
+                  [(ngModel)]="currentPassword"
+                  name="fullName"
+                />
+              </div>
+
+              <div class="col-md-10">
+                <label for="inputNewPassword" class="form-label"
+                  >New password <span>*</span></label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputNewPassword"
+                  [(ngModel)]="newPassword"
+                  name="phone"
+                />
+              </div>
+
+              <div class="col-md-10">
+                <label for="inputConfirmPassword" class="form-label"
+                  >Confirm password <span>*</span></label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputConfirmPassword"
+                  [(ngModel)]="confirmPassword"
+                  name="address"
+                />
+              </div>
+              <div class="form-button col-md-10">
+                <button
+                  type="submit"
+                  class="btn-save"
+                  (click)="changePassword()"
+                >
+                  SAVE
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <!-- LOG OUT -->
+          <div
+            class="tab-pane fade"
+            id="list-logout"
+            role="tabpanel"
+            aria-labelledby="list-logout-list"
+          >
+            <div class="form-button">
+              <button type="submit" class="btn-save" (click)="logout()">
+                LOG OUT
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

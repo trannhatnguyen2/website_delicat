@@ -1,0 +1,27 @@
+<div class="container-review">
+  <div class="rating__item d-flex flex-row">
+    <div class="star">
+      <i
+        *ngFor="let i of ratingStar"
+        class="bi bi-star-fill"
+        id="starYellow"
+      ></i>
+
+      <i
+        *ngFor="let i of ratingStarGray"
+        class="bi bi-star-fill"
+        id="starGray"
+      ></i>
+    </div>
+  </div>
+
+  <div>
+    <p class="title">
+      <strong>{{ reviewDetail.userName }}</strong> -
+      {{ reviewDetail.dateCreate }}
+    </p>
+    <p class="comment">
+      {{ reviewDetail.review }}
+    </p>
+  </div>
+</div>

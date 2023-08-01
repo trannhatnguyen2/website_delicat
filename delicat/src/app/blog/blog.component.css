@@ -1,0 +1,30 @@
+/* general */
+.uppercase {
+  text-transform: uppercase;
+}
+
+.blog__cover {
+  position: relative;
+  user-select: none;
+}
+
+.blog__cover .cover__img img {
+  width: 100%;
+}
+
+.blog__cover .cover__title {
+  position: absolute;
+  color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.blog__content {
+  width: 100%;
+  padding: 50px 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* margin: 40px 0; */
+}

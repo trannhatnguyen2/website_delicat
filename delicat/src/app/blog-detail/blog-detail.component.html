@@ -1,0 +1,18 @@
+<div class="container__blog-detail">
+  <h1 class="blog-detail__title">
+    {{ blogDetail.title }}
+  </h1>
+  <img class="blog-detail__img" [src]="blogDetail.img" alt="" />
+  <div class="blog-detail__source">
+    <span id="source__author"
+      >{{ blogDetail.author }} | {{ blogDetail.date }}</span
+    >
+    <!-- <span id="source__line">|</span> -->
+    <!-- <span id="source__date">{{ blogDetail.date }}</span> -->
+  </div>
+
+  <div class="blog-detail__content" [innerHTML]="blogDetail.content"></div>
+  <div class="btn">
+    <button id="btn--all" (click)="viewBlog()">Read more blogs</button>
+  </div>
+</div>

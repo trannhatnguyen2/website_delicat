@@ -1,0 +1,57 @@
+.container__contact {
+  margin-top: 40px;
+}
+
+.content {
+  margin-bottom: 60px;
+}
+
+.title {
+  margin-bottom: 40px;
+}
+
+.left__content {
+  max-width: 600px;
+  width: 600px;
+}
+
+span {
+  color: red;
+}
+
+.right__content {
+  padding: 0 60px;
+}
+
+.down__right__content {
+  margin-top: 60px;
+}
+
+.down__right__content p {
+  margin: 0;
+}
+
+.iframe__map {
+  margin-top: 60px;
+}
+
+/*=================================================*/
+/* RESPONSIVE */
+@media only screen and (max-width: 768px) {
+  .content {
+    flex-direction: column;
+  }
+
+  .left__content {
+    width: 100%;
+  }
+
+  .right__content {
+    padding: 0 10px;
+    margin-top: 40px;
+  }
+
+  .down__right__content > div {
+    justify-content: space-between !important;
+  }
+}

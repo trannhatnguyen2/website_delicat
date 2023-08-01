@@ -1,0 +1,22 @@
+<div class="container__blog">
+  <nav aria-label="breadcrumb" style="padding: 12px 0" class="bg-secondary">
+    <ol class="breadcrumb" style="margin-left: 85px; margin-bottom: 0">
+      <li class="breadcrumb-item"><a href="">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="blog">Blog</li>
+    </ol>
+  </nav>
+
+  <div class="blog__cover">
+    <div class="cover__img">
+      <img src="../../assets/img/cover.png" alt="" />
+    </div>
+    <h1 class="cover__title uppercase">our blog</h1>
+  </div>
+
+  <div class="blog__content">
+    <app-blog-item
+      *ngFor="let blog of blogsShow"
+      [blogItem]="blog"
+    ></app-blog-item>
+  </div>
+</div>

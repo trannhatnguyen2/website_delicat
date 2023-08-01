@@ -1,0 +1,97 @@
+<header>
+  <!-- Search Form -->
+  <!-- <div class="search-form d-flex align-items-center" *ngIf="isSearchOpen">
+    <div class="container">
+      <form action="index.html" method="get">
+        <div class="row g-3">
+          <div class="col-md-11">
+            <input
+              type="search"
+              class="form-control"
+              id="searchFormInput"
+              placeholder="Enter Product Name ..."
+            />
+          </div>
+
+          <div class="col-md-1">
+            <button type="submit" class="btn btn-primary">Search</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div> -->
+
+  <div class="header__top">
+    <div>
+      <div class="header__logo">
+        <a href="" class="textcolor">
+          <img
+            src="../../assets/img/logo.svg"
+            alt=""
+            style="height: 40px; width: auto"
+          />
+        </a>
+      </div>
+
+      <div class="container__heartCartUser">
+        <span class="position-relative">
+          <a style="position: relative; cursor: pointer" (click)="checkLogin()">
+            <i class="bi bi-person-circle" aria-hidden="true"></i>
+          </a>
+        </span>
+
+        <span class="position-relative">
+          <a href="basket" style="position: relative">
+            <i class="bi bi-cart" aria-hidden="true"></i>
+            <span
+              class="badge bg-danger position-absolute top-0 start-100 translate-middle"
+              style="font-size: 8px; margin-top: 7px; width: 24px"
+            >
+              {{ countCart }}
+            </span>
+          </a>
+        </span>
+
+        <span class="position-relative">
+          <a href="wishlist" style="position: relative">
+            <i class="bi bi-heart" aria-hidden="true"></i>
+            <span
+              class="badge bg-danger position-absolute top-0 start-100 translate-middle"
+              style="font-size: 8px; margin-top: 7px; width: 24px"
+            >
+              {{ countWishlist }}
+            </span>
+          </a>
+        </span>
+
+        <!-- <span class="position-relative">
+          <a
+            style="position: relative; cursor: pointer"
+            (click)="toggleSearch()"
+          >
+            <i class="bi bi-search" aria-hidden="true"></i>
+          </a>
+        </span> -->
+      </div>
+    </div>
+  </div>
+  <div style="overflow-x: auto">
+    <ul class="navibar" style="padding-right: 2rem">
+      <li>
+        <a href="">HOME</a>
+      </li>
+      <li class="navi_shop">
+        <a href="shop">SHOP</a>
+      </li>
+      <li>
+        <a href="blog">BLOG</a>
+      </li>
+      <li>
+        <a href="about">ABOUT</a>
+      </li>
+      <li>
+        <a href="contact">CONTACT</a>
+      </li>
+    </ul>
+  </div>
+</header>

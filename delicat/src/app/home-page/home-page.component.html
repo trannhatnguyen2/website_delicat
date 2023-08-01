@@ -1,0 +1,107 @@
+<div class="container-fluid container__homepage">
+  <app-banner></app-banner>
+
+  <div class="block-pd discovery">
+    <div class="title">
+      <hr class="hr__underlay" />
+      <div class="d-flex justify-content-center">
+        <h1>DISCOVERY</h1>
+      </div>
+      <p>Satisfy your own shopping needs!</p>
+    </div>
+
+    <div class="sub__discovery container d-flex flex-row flex-wrap">
+      <div class="img__discovery" (click)="viewShop()">
+        <button
+          class="btn-discovery btn-shop btn btn-primary rounded-5 fs-7 fw-bold"
+          (click)="viewShop()"
+        >
+          SHOP SUITS
+        </button>
+        <img src="../../assets/img/discovery_1.jpg" alt="" />
+      </div>
+
+      <div class="img__discovery" (click)="viewShop()">
+        <button
+          class="btn-discovery btn-shop btn btn-primary rounded-5 fs-7 fw-bold"
+          (click)="viewShop()"
+        >
+          SHOP ACCESSORIES
+        </button>
+        <img src="../../assets/img/discovery_2.jpg" alt="" />
+      </div>
+    </div>
+  </div>
+
+  <div class="block-pd best__seller">
+    <div class="title">
+      <hr class="hr__underlay" />
+      <div class="d-flex justify-content-evenly">
+        <h1>BEST SELLERS</h1>
+      </div>
+      <p>Get the inspired by our bestsellers!</p>
+    </div>
+
+    <div
+      class="list_item_best_seller container d-flex justify-content-evenly flex-wrap"
+    >
+      <app-product-item
+        *ngFor="let item of itemBestSellerShow"
+        [productDetail]="item"
+      ></app-product-item>
+    </div>
+  </div>
+
+  <div class="block-pd best__collection">
+    <div class="title">
+      <hr class="hr__underlay" />
+      <div class="d-flex justify-content-evenly">
+        <h1>BEST COLLECTION</h1>
+      </div>
+      <p>Choose your own style!</p>
+    </div>
+
+    <div class="container d-flex flex-row sub__best__collection">
+      <div class="left__item flex-grow-1 w-50 d-flex justify-content-center">
+        <img src="../../assets/img/S005_0.jpg" alt="" (click)="viewShop()" />
+      </div>
+
+      <div class="right__item d-flex w-50 flex-grow-1 justify-content-center">
+        <div class="d-flex flex-wrap gap-3 justify-content-center">
+          <img src="../../assets/img/A001_0.jpg" alt="" (click)="viewShop()" />
+          <img src="../../assets/img/A002_0.jpg" alt="" (click)="viewShop()" />
+          <img src="../../assets/img/S003_0.jpg" alt="" (click)="viewShop()" />
+          <img src="../../assets/img/S004_0.jpg" alt="" (click)="viewShop()" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="block-pd new__products">
+    <div class="title">
+      <hr class="hr__underlay" />
+      <div class="d-flex justify-content-evenly">
+        <h1>NEW PRODUCTS</h1>
+      </div>
+      <p>It’s shopping time!</p>
+    </div>
+    <!-- <div *ngFor="let item of templistItemsFinal">{{ item | json }}</div> -->
+
+    <div class="container all__items d-flex flex-wrap justify-content-evenly">
+      <app-product-item
+        *ngFor="let item of itemNewShow"
+        [productDetail]="item"
+        [customerInfo]="customerInfo"
+      ></app-product-item>
+    </div>
+
+    <div class="shop__now">
+      <button
+        class="btn-shop btn btn-primary rounded-5 fs-7 fw-bold"
+        (click)="viewShop()"
+      >
+        SHOP NOW
+      </button>
+    </div>
+  </div>
+</div>

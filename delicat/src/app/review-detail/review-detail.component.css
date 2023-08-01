@@ -1,0 +1,33 @@
+#starYellow {
+  color: #deab29;
+}
+
+#starGray {
+  color: grey;
+}
+
+.container-review {
+  border-bottom: 1px solid var(--bs-primary);
+  margin-top: 20px;
+}
+
+.rating__item {
+  margin-top: 5px;
+}
+
+.star > * {
+  margin-left: 4px;
+}
+
+.title {
+  margin-bottom: 10px;
+}
+
+.title,
+.comment {
+  color: var(--bs-primary);
+}
+
+.title > strong {
+  color: var(--bs-info);
+}

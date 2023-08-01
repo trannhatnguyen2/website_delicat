@@ -1,0 +1,45 @@
+<div class="container-product-basket d-flex justify-content-between">
+  <div class="d-flex">
+    <div class="img" (click)="viewProductDetail(cartItem.productId)">
+      <img src="" alt="" [src]="productDetail.imgURL[0]" />
+    </div>
+
+    <div class="product-item">
+      <h4 class="title">
+        {{ productDetail.name }}
+      </h4>
+
+      <div class="d-flex choose__size__color">
+        <p class="size">Size: {{ sizeChose }}</p>
+        <p class="color">Color: {{ colorChose }}</p>
+      </div>
+
+      <div class="choose__quantity d-flex align-items-center">
+        <button
+          type="button"
+          class="btn btn-light btn-lg"
+          (click)="changeQuantity(-1)"
+        >
+          -
+        </button>
+        <p id="quantity">{{ cartItem.quantity }}</p>
+        <button
+          type="button"
+          class="btn btn-light btn-lg"
+          (click)="changeQuantity(1)"
+        >
+          +
+        </button>
+      </div>
+
+      <h5 class="price">${{ productDetail.price * cartItem.quantity }}.00</h5>
+    </div>
+  </div>
+
+  <button
+    type="button"
+    class="btn-close"
+    aria-label="Close"
+    (click)="removeFromBasket()"
+  ></button>
+</div>

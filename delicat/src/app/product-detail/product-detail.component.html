@@ -1,0 +1,208 @@
+<nav aria-label="breadcrumb" style="padding: 12px 0" class="bg-secondary">
+  <ol class="breadcrumb" style="margin-left: 85px; margin-bottom: 0">
+    <li class="breadcrumb-item"><a href="">Home</a></li>
+    <li class="breadcrumb-item"><a href="shop">Shop</a></li>
+    <li class="breadcrumb-item active" aria-current="id">
+      {{ productDetail.name }}
+    </li>
+  </ol>
+</nav>
+<div
+  *ngIf="productDetail"
+  class="container__product-detail container d-flex flex-column flex-grow-1"
+>
+  <div class="section__up d-flex flex-row">
+    <div class="img__product d-flex flex-row justify-content-around">
+      <div class="left__img__product">
+        <div>
+          <img alt="" [src]="subImg_0" (click)="changeImg($event)" />
+        </div>
+        <div>
+          <img alt="" [src]="subImg_1" (click)="changeImg($event)" />
+        </div>
+        <div>
+          <img alt="" [src]="subImg_2" (click)="changeImg($event)" />
+        </div>
+      </div>
+
+      <div class="right__img__product">
+        <img [src]="mainImg" />
+      </div>
+    </div>
+
+    <div class="right__content d-flex flex-column flex-grow-1">
+      <div class="product__order">
+        <p class="product__name">{{ productDetail.name }}</p>
+        <span class="product__price">${{ productDetail.price }}.00</span>
+        <div class="select__size">
+          <p>
+            Select size: <span>{{ selectSizeDefault }}</span>
+          </p>
+          <div class="all__size d-flex flex-wrap">
+            <div *ngFor="let item of productDetail.size">
+              <input
+                type="checkbox"
+                class="btn-check"
+                [id]="'btn-check-2-outlined' + item"
+                [checked]="item === sizeChecked"
+                autocomplete="off"
+                (click)="changeSize($event, item)"
+              />
+              <label
+                class="btn btn-outline-primary"
+                [htmlFor]="'btn-check-2-outlined' + item"
+                >{{ item }}
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="select__color">
+          <p>
+            Select color: <span>{{ selectColorDefault }}</span>
+          </p>
+          <div class="all__color d-flex flex-wrap">
+            <div *ngFor="let item of productDetail.color">
+              <input
+                type="checkbox"
+                class="btn-check"
+                [id]="'btn-check-2-outlined' + item"
+                [checked]="item === colorChecked"
+                autocomplete="off"
+                (click)="changeColor($event, item)"
+              />
+              <label
+                class="btn btn-outline-primary"
+                [htmlFor]="'btn-check-2-outlined' + item"
+                >{{ item }}
+              </label>
+            </div>
+          </div>
+
+          <div class="select__quantity d-flex align-items-center">
+            <p>Select quantity:</p>
+            <div class="choose__quantity d-flex align-items-center">
+              <button
+                type="button"
+                class="btn btn-secondary btn-lg"
+                (click)="changeQuantity(-1)"
+              >
+                -
+              </button>
+              <p id="quantity">{{ productDetailBuy.quantity }}</p>
+              <button
+                type="button"
+                class="btn btn-secondary btn-lg"
+                (click)="changeQuantity(1)"
+              >
+                +
+              </button>
+            </div>
+          </div>
+
+          <div class="buy__product d-flex justify-content-between">
+            <button
+              type="button"
+              class="btn btn-secondary btn-cart"
+              style="border: 1px solid var(--bs-primary)"
+              [disabled]="
+                (productDetailBuy.quantity === 0 &&
+                  selectColorDefault === '' &&
+                  selectSizeDefault === '') ||
+                (productDetailBuy.quantity === 0 &&
+                  selectColorDefault === '') ||
+                (productDetailBuy.quantity === 0 && selectSizeDefault === '') ||
+                (selectColorDefault === '' && selectSizeDefault === '') ||
+                productDetailBuy.quantity === 0 ||
+                selectColorDefault === '' ||
+                selectSizeDefault === ''
+              "
+              (click)="addToCart('add')"
+            >
+              Add to cart
+            </button>
+
+            <button
+              type="button"
+              class="btn btn-primary"
+              (click)="addToCart('buy')"
+            >
+              Buy now
+            </button>
+          </div>
+        </div>
+
+        <div class="policy">
+          <p>Fast & Free shipping.</p>
+          <p>You have 7 days to return. <a href="policy">Return policy</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section__down d-flex flex-column">
+    <div class="product__describe">
+      <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseOne"
+              aria-expanded="true"
+              aria-controls="collapseOne"
+            >
+              Description
+            </button>
+          </h2>
+          <div
+            id="collapseOne"
+            class="accordion-collapse collapse show"
+            aria-labelledby="headingOne"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              <p [innerHTML]="productDetail.describe"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section__reviews">
+      <div class="rating d-flex justify-content-between">
+        <div class="d-flex flex-row">
+          <div class="score">
+            <p>
+              Rating: <span>{{ getRatingStar() }}.0/5.0</span>
+            </p>
+          </div>
+          <div class="star">
+            <i
+              *ngFor="let i of ratingStar"
+              class="bi bi-star-fill"
+              id="starYellow"
+            ></i>
+
+            <i
+              *ngFor="let i of ratingStarGray"
+              class="bi bi-star-fill"
+              id="starGray"
+            ></i>
+          </div>
+        </div>
+
+        <div class="number__reviews justify-content-end">
+          <p></p>
+        </div>
+      </div>
+      <div class="comments">
+        <app-review-detail
+          *ngFor="let item of productDetail.reviews"
+          [reviewDetail]="item"
+        ></app-review-detail>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,196 @@
+[
+  {
+    "id": "S001",
+    "name": "Antique Rogue Slim Fit Black",
+    "price": 200.0,
+    "imgURL": ["S001_0.jpg", "S001_1.jpg", "S001_2.jpg"],
+    "describe": "Break tradition and style your suit with the Limehaus Tux Waistcoat or stand out from the crowd in the Racing Green Double Breasted Scoop Waistcoat.",
+    "tag": "suiting",
+    "size": ["M", "L", "XL"],
+    "color": ["cream", "brown"],
+    "reviews": {
+      "ratingStar": 5,
+      "countReviews": 2,
+      "comments": [
+        {
+          "id": 1,
+          "ratingComment": 5,
+          "userName": "Robin brisley",
+          "dateCreate": "August 20, 2021",
+          "review": "Very Good quality and fit."
+        },
+        {
+          "id": 2,
+          "ratingComment": 5,
+          "userName": "Liam searle",
+          "dateCreate": "November 25, 2020",
+          "review": "Fit perfect and love the colour."
+        }
+      ]
+    }
+  },
+  {
+    "id": "S002",
+    "name": "Slim Dark Green Suit",
+    "price": 180.0,
+    "imgURL": ["S002_0.jpg", "S002_1.jpg", "S002_2.jpg"],
+    "describe": "Complete the look with the matching jacket for the perfect wedding suit – whether you’re Best Man or guest. Since its creation in 1990, Racing Green has been woven into everyday British life. The brand’s careful consideration of materials, colours and archival trends deliver quality-led, original pieces that are an ode to life on our unique and eccentric isles. Shop timeless casualwear, formalwear and accessories rooted in British heritage.",
+    "tag": "suiting",
+    "size": ["L", "XL", "XXL"],
+    "color": ["green", "gray"],
+    "reviews": {
+      "ratingStar": 4,
+      "countReviews": 3,
+      "comments": [
+        {
+          "id": 1,
+          "ratingComment": 4,
+          "userName": "Robin brisley",
+          "dateCreate": "November 2, 2020",
+          "review": "Great value for money. Really good fit and looks expensive."
+        },
+        {
+          "id": 2,
+          "ratingComment": 4,
+          "userName": "Liam searle",
+          "dateCreate": "November 25, 2020",
+          "review": "Fitted well but not to my taste, maybe should have gone for a different style"
+        }
+      ]
+    }
+  },
+  {
+    "id": "S003",
+    "name": "Tailored Fit Burgundy Jacket",
+    "price": 99.0,
+    "imgURL": ["S003_0.jpg", "S003_1.jpg", "S003_2.jpg"],
+    "describe": "Make a statement this season with this Ted Baker showstopper. In a luxurious Italian merlot velvet, this slim fit jacket with satin lapel will be sure to steal the show at your next upcoming event. Featuring a one-button fastening and in-built pocket square, this jacket is the perfect choice for a daring look.",
+    "tag": "blazers",
+    "size": ["S", "XL"],
+    "color": ["brown", "red"],
+    "reviews": {
+      "ratingStar": 1,
+      "countReviews": 2,
+      "comments": [
+        {
+          "id": 1,
+          "ratingComment": 1,
+          "userName": "Andrew",
+          "dateCreate": "December 2, 2022",
+          "review": "Not received it 😕 don't know what it's like"
+        },
+        {
+          "id": 2,
+          "ratingComment": 1,
+          "userName": "Bob",
+          "dateCreate": "March 14, 2022",
+          "review": "No response about my refund but"
+        }
+      ]
+    }
+  },
+  {
+    "id": "S004",
+    "name": "Slim Fit Grey Check Blazer",
+    "price": 65.0,
+    "imgURL": ["S004_0.jpg", "S004_1.jpg", "S004_2.jpg"],
+    "describe": "Break tradition and style your suit with the Limehaus Tux Waistcoat or stand out from the crowd in the Racing Green Double Breasted Scoop Waistcoat.",
+    "tag": "suiting",
+    "size": ["S", "M", "XXXL"],
+    "color": ["gray", "brown"],
+    "reviews": {
+      "ratingStar": 5,
+      "countReviews": 2,
+      "comments": [
+        {
+          "id": 1,
+          "ratingComment": 5,
+          "userName": "John",
+          "dateCreate": "August 21, 2022",
+          "review": "Perfect fit. Quality as expected."
+        },
+        {
+          "id": 2,
+          "ratingComment": 1,
+          "userName": "Adam",
+          "dateCreate": "May 14, 2022",
+          "review": "FITS LIKE A GLOVE.AND QUALITY BRILIANT"
+        }
+      ]
+    }
+  },
+  {
+    "id": "S005",
+    "name": "Antique Rogue Slim Fit Black",
+    "price": 30.0,
+    "imgURL": ["S005_0.jpg", "S005_1.jpg", "S005_2.jpg"],
+    "describe": "This Limehaus slim-fitting shirt features a white poplin fabric with a forward-point collar and double cuffs to accessorise with cufflinks – it’s the perfect shirt for any occasion.",
+    "tag": "shirts",
+    "size": ["S", "M", "L"],
+    "color": ["cream"],
+    "reviews": {
+      "ratingStar": 3,
+      "countReviews": 3,
+      "comments": [
+        {
+          "id": 1,
+          "ratingComment": 5,
+          "userName": "Chirpy",
+          "dateCreate": "December 5, 2022",
+          "review": "Got this in the sale and while it’s not the best quality it’s certainly well worth circa £100. Comfortable to wear and smart looking, a good buy."
+        },
+        {
+          "id": 2,
+          "ratingComment": 1,
+          "userName": "Chothia",
+          "dateCreate": "May 14, 2022",
+          "review": "I still haven’t received the suit I ordered. It’s been 8 days now. Evri saying there’s a delay. I would like to know what the delay is"
+        },
+        {
+          "id": 3,
+          "ratingComment": 3,
+          "userName": "Levi",
+          "dateCreate": "December 3, 2022",
+          "review": "Item missing from parcel."
+        }
+      ]
+    }
+  },
+  {
+    "id": "S006",
+    "name": "Taupe Overcheck Trousers",
+    "price": 70.0,
+    "imgURL": ["S006_0.jpg", "S006_1.jpg", "S006_2.jpg"],
+    "describe": "Strut your stuff in style - this slim fit cream checked trouser is a dapper addition to any wardrobe, with a rebellious, trendy feel practically woven into its fabric, with a style taupe overcheck. Effortlessly sharp, this ivory checked suit trouser features a flat fronted design, side pockets and a trademark slim fit, in a soft, cream colour scheme that's ideal for summer. A classic suit by Antique Rogue, inspired by a rock and roll attitude and a more rebellious feel for menswear.",
+    "tag": "trousers",
+    "size": ["M", "L", "XL", "XXL"],
+    "color": ["cream", "cream"],
+    "reviews": {
+      "ratingStar": 4,
+      "countReviews": 5,
+      "comments": [
+        {
+          "id": 1,
+          "ratingComment": 1,
+          "userName": "Joseph",
+          "dateCreate": "December 1, 2022",
+          "review": "Ordered 17.5 inch white shirt, received 14 inch neck blue shirt. Perfect, thanks!"
+        },
+        {
+          "id": 2,
+          "ratingComment": 1,
+          "userName": "Alex",
+          "dateCreate": "November 24, 2022",
+          "review": "Never got my item. Customer services a nightmare. Ordered 9 days ago, no one replying to me. Still no refund or response. £250 and still trying to claim back. Delivery company accepted the order and it never arrived."
+        },
+        {
+          "id": 3,
+          "ratingComment": 1,
+          "userName": "Sam",
+          "dateCreate": "August 6, 2022",
+          "review": "Great quality and great fit. Comes with buttons attached so no need for cufflinks."
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,43 @@
+.container-policy {
+  margin-top: 40px;
+}
+
+p {
+  text-align: justify;
+}
+
+.content {
+  margin-top: 40px;
+
+  height: fit-content;
+}
+
+#list-example {
+  max-width: 300px;
+}
+
+@media only screen and (max-width: 768px) {
+  #list-example {
+    position: inherit !important;
+    width: 90% !important;
+    margin: 0 auto;
+  }
+
+  .content {
+    flex-direction: column !important;
+  }
+
+  .container-list-ex {
+    width: 90%;
+  }
+
+  #list-example {
+    flex-direction: row;
+  }
+
+  .content-policy {
+    width: 100%;
+    margin-top: 40px;
+    padding: 0 20px;
+  }
+}

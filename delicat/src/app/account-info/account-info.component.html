@@ -1,0 +1,69 @@
+<div class="container">
+  <form action="#" class="row g-3" id="form_infor" dmethod="POST">
+    <h1 class="form-header">Welcome!</h1>
+    <p class="form-biglable">YOUR INFORMATION</p>
+
+    <!-- Full Name -->
+    <div class="col-md-12">
+      <label for="inputFullName" class="form-label"
+        >Full Name <span>*</span></label
+      >
+      <input
+        type="text"
+        class="form-control"
+        id="inputFullName"
+        [(ngModel)]="customerInfo.fullName"
+        name="fullName"
+      />
+    </div>
+
+    <!-- Mobile Number -->
+    <div class="col-md-4">
+      <label for="inputMobileNumber" class="form-label"
+        >Mobile Number <span>*</span></label
+      >
+      <input
+        type="text"
+        class="form-control"
+        id="inputMobileNumber"
+        [(ngModel)]="customerInfo.phone"
+        name="phone"
+      />
+    </div>
+
+    <!-- Email -->
+    <div class="col-md-8">
+      <label for="inputEmail" class="form-label">Email <span>*</span></label>
+      <input
+        type="email"
+        class="form-control"
+        id="inputEmail"
+        [(ngModel)]="customerInfo.userName"
+        name="userName"
+        disabled
+      />
+    </div>
+
+    <!-- Address -->
+    <!-- <p class="form-biglable">YOUR ADDRESS</p> -->
+    <div class="col-12">
+      <label for="inputAddress" class="form-label"
+        >Address <span>*</span></label
+      >
+      <input
+        type="email"
+        class="form-control"
+        id="inputAddress"
+        [(ngModel)]="customerInfo.address"
+        name="address"
+      />
+    </div>
+
+    <!-- btn-save -->
+    <div class="form-button">
+      <button type="submit" class="btn-save" (click)="saveCustomerInfo()">
+        SAVE
+      </button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,79 @@
+.container__payment {
+  background-color: var(--bs-secondary);
+}
+
+.content {
+  margin-top: 60px;
+  padding-bottom: 120px;
+}
+
+.title {
+  text-align: center;
+}
+
+span {
+  color: red;
+}
+
+.pay-with {
+  width: 60px;
+}
+
+.pay-with:first-child {
+  background-color: white;
+  height: 36px;
+  border-radius: 2px;
+}
+
+.pay-with {
+  margin-left: 10px;
+}
+
+.btn-pay-with {
+  background-color: white;
+}
+
+.right__content {
+  padding: 0 60px;
+  min-width: 450px;
+}
+
+.bill__cover {
+  padding: 20px;
+  margin-bottom: 40px;
+  text-align: center;
+  background-color: var(--bs-secondary);
+}
+
+.bill__cover > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.bill__cover > div p {
+  margin-bottom: 8px;
+}
+
+.bill__cover > div:nth-child(1),
+.bill__cover > div:nth-child(2) {
+  color: gray;
+}
+
+.btn-pay,
+.btn-view-order {
+  width: 100%;
+  background-color: black;
+}
+
+/*=================================================*/
+/* RESPONSIVE */
+@media only screen and (max-width: 1024px) {
+  .content {
+    flex-direction: column;
+  }
+
+  .right__content {
+    margin-top: 60px;
+    min-width: 300px;
+  }
+}

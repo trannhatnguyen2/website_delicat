@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "delicatadmin": {
+      "hosting": {
+        "delicat": [
+          "delicatadmin"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "delicatadmin"
+  }
+}

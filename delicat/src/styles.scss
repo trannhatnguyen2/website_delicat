@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+$primary: #6c4f37;
+$secondary: #f3f1e4;
+$light: #e5d1bf;
+$info: #652f37;
+
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "bootstrap";
+@import url("../node_modules/bootstrap-icons/font/bootstrap-icons.css");
+
+.fs-7 {
+  font-size: 0.75rem;
+}

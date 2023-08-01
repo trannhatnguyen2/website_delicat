@@ -1,0 +1,189 @@
+[
+  {
+    "id": "A001",
+    "name": "Burgundy Bow Tie",
+    "price": 15.0,
+    "imgURL": ["A001_0.jpg", "A001_1.jpg", "A001_2.jpg"],
+    "describe": "Offering contemporary versatility, this Limehaus regular tie and hank features a light blue paisley design in 100% polyester – meaning it’s easy to care for and comes with the added bonus of being machine-washable.",
+    "tag": "ties",
+    "size": ["S", "M"],
+    "color": ["red", "cream", "brown"],
+    "reviews": {
+      "ratingStar": 3,
+      "countReviews": 2,
+      "comments": [
+        {
+          "id": 1,
+          "ratingComment": 1,
+          "userName": "Mel",
+          "dateCreate": "November 24, 2022",
+          "review": "Never got my item. Customer services a nightmare. Ordered 9 days ago, no one replying to me. Still no refund or response. £250 and still trying to claim back. Delivery company accepted the order and it never arrived."
+        },
+        {
+          "id": 2,
+          "ratingComment": 5,
+          "userName": "Alan",
+          "dateCreate": "October 1, 2022",
+          "review": "Great colour goes well eith the suit"
+        }
+      ]
+    }
+  },
+  {
+    "id": "A002",
+    "name": "Black & Brown Reversible Belt",
+    "price": 25.0,
+    "imgURL": ["A002_0.jpg", "A002_1.jpg", "A002_2.jpg"],
+    "describe": "This reversible coated leather belt has a tan upper and a contrasting black underside. The perfect belt for a capsule wardrobe.",
+    "tag": "belts",
+    "size": ["XL", "XXL"],
+    "color": ["brown", "grey"],
+    "reviews": {
+      "ratingStar": 3,
+      "countReviews": 2,
+      "comments": [
+        {
+          "id": 1,
+          "ratingComment": 1,
+          "userName": "Mel Daddow",
+          "dateCreate": "July 4, 2022",
+          "review": "Very small fit I’m slim and it was very tight."
+        },
+        {
+          "id": 2,
+          "ratingComment": 5,
+          "userName": "Andrew Frisby",
+          "dateCreate": "June 6, 2022",
+          "review": "Great quality and great fit. Comes with buttons attached so no need for cufflinks."
+        }
+      ]
+    }
+  },
+  {
+    "id": "A003",
+    "name": "Bordeaux Loafer Shoe",
+    "price": 50.0,
+    "imgURL": ["A003_0.jpg", "A003_1.jpg", "A003_2.jpg"],
+    "describe": "Put your best foot forward with Jeff Banks’s latest collection. In a Bordeaux-red leather, these shoes are built for any wardrobe and make for a superb addition with their formal, sophisticated quality. Featuring a medium heel, low top and deep leather, they work with any dress code or occasion; style yours with your favourite Jeff Banks suit or a smart-casual knitted jumper and trousers combination.",
+    "tag": "shoes",
+    "size": ["7", "8", "11"],
+    "color": ["brown"],
+    "reviews": {
+      "ratingStar": 4,
+      "countReviews": 3,
+      "comments": [
+        {
+          "id": 1,
+          "ratingComment": 2,
+          "userName": "Smith",
+          "dateCreate": "October 13, 2022",
+          "review": "Ordered the wrong shoes for me, little gutted not gonna lie."
+        },
+        {
+          "id": 2,
+          "ratingComment": 5,
+          "userName": "Simon HoldsworthBob",
+          "dateCreate": "August 5, 2022",
+          "review": "Love my shoes and they can in good time"
+        },
+        {
+          "id": 3,
+          "ratingComment": 5,
+          "userName": "Frank Loka",
+          "dateCreate": "March 10, 2022",
+          "review": "Great buy, the shoe is looking very nice better than as I saw it online"
+        }
+      ]
+    }
+  },
+  {
+    "id": "A004",
+    "name": "Emerald Spot Tie",
+    "price": 15.0,
+    "imgURL": ["A004_0.jpg", "A004_1.jpg", "A004_2.jpg"],
+    "describe": "Since its creation in 1990, Racing Green has been woven into everyday British life. The brand’s careful consideration of materials, colours and archival trends deliver quality-led, original pieces that are an ode to life on our unique and eccentric isles. Shop timeless casualwear, formalwear and accessories rooted in British heritage.",
+    "tag": "ties",
+    "size": ["M", "L", "XL", "XXL"],
+    "color": ["green"],
+    "reviews": {
+      "ratingStar": 5,
+      "countReviews": 2,
+      "comments": [
+        {
+          "id": 1,
+          "ratingComment": 5,
+          "userName": "Adam",
+          "dateCreate": "July 27, 2020",
+          "review": "Gorgeous colour and fabric. Exactly as I’d hoped. A perfect width of tie too for my 18 year old son. Great price, very pleased."
+        },
+        {
+          "id": 2,
+          "ratingComment": 5,
+          "userName": "Sarah-Jane",
+          "dateCreate": "July 25, 2022",
+          "review": "Affordable and great for a wedding, work or family dinner."
+        }
+      ]
+    }
+  },
+  {
+    "id": "A005",
+    "name": "Brown Leather Derby Shoes",
+    "price": 70.0,
+    "imgURL": ["A005_0.jpg", "A005_1.jpg", "A005_2.jpg"],
+    "describe": "Racing Green 1990 premium collection. This premium style boasts hand-finished brown leather upper, and leather lining and is finished on a half leather half rubber sole. A classic wardrobe staple.",
+    "tag": "shoes",
+    "size": ["10", "11"],
+    "color": ["brown"],
+    "reviews": {
+      "ratingStar": 5,
+      "countReviews": 2,
+      "comments": [
+        {
+          "id": 1,
+          "ratingComment": 5,
+          "userName": "Daniel Taylor",
+          "dateCreate": "August 26, 2022",
+          "review": "Next day delivery and good quality"
+        },
+        {
+          "id": 2,
+          "ratingComment": 5,
+          "userName": "Sam John",
+          "dateCreate": "September 26, 2022",
+          "review": "Perfect fitting and comfortable shoes"
+        }
+      ]
+    }
+  },
+  {
+    "id": "A006",
+    "name": "Oatmeal Tweed Tie",
+    "price": 15.0,
+    "imgURL": ["A006_0.jpg", "A006_1.jpg", "A006_2.jpg"],
+    "describe": "A perfect match for any suit with an opulent, kitschy feel, this butterfly bow tie features a oatmeal tweed fabric.",
+    "tag": "ties",
+    "size": ["S", "M", "XL", "XXL", "XXXL"],
+    "color": ["cream", "red"],
+    "reviews": {
+      "ratingStar": 3,
+      "countReviews": 2,
+      "comments": [
+        {
+          "id": 1,
+          "ratingComment": 4,
+          "userName": "Mark maith",
+          "dateCreate": "June 27, 2022",
+          "review": "With this suit had to be exchanged as the nearly didn’t receive delivery, but managed to great assistance from the customer server service Danielle. But would love to thank the store Manager for allowing to exchange this f ok e s as bother giving the circumstances of nature of the funeral."
+        },
+        {
+          "id": 2,
+          "ratingComment": 2,
+          "userName": "Jimmy tucker",
+          "dateCreate": "June 27, 2022",
+          "review": "Size did not fit twice, returned both and not refunded yet. No phone number to call either."
+        }
+      ]
+    }
+  }
+]

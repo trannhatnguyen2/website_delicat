@@ -1,0 +1,80 @@
+<div class="container__wishlist">
+  <nav aria-label="breadcrumb" style="padding: 12px 0" class="bg-secondary">
+    <ol class="breadcrumb" style="margin-left: 85px; margin-bottom: 0">
+      <li class="breadcrumb-item"><a href="">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="blog">Wishlist</li>
+    </ol>
+  </nav>
+
+  <div class="wishlist__cover">
+    <div class="cover__img">
+      <img src="../../assets/img/cover.png" alt="" />
+    </div>
+    <h1 class="cover__title uppercase">my wishlist</h1>
+  </div>
+
+  <div class="wishlist__content">
+    <div class="content__up">
+      <div class="quantity">
+        <p class="p-quantity">{{ products.length }} items</p>
+      </div>
+
+      <div class="sort">
+        <div class="dropdown sort__item text-end d-flex">
+          <button
+            class="btn btn-secondary dropdown-toggle"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Sort by
+          </button>
+
+          <ul class="dropdown-menu">
+            <li>
+              <button
+                class="dropdown-item"
+                type="button"
+                (click)="orderByPrice()"
+              >
+                Price Low to High
+              </button>
+            </li>
+            <li>
+              <button
+                class="dropdown-item"
+                type="button"
+                (click)="orderDescByPrice()"
+              >
+                Price High to Low
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="content__down d-flex flex-wrap">
+      <app-product-item-wishlist
+        *ngFor="let item of products"
+        [productDetail]="item"
+        [customerInfo]="customerInfo"
+      ></app-product-item-wishlist>
+
+      <div *ngIf="isHaveProduct" class="no__items">
+        <i class="bi bi-heart"></i>
+        <p style="font-weight: bold; font-size: 24px">
+          You have no saved items
+        </p>
+        <div class="shop__now">
+          <button
+            class="btn-shop btn btn-primary rounded-5 fs-7 fw-bold"
+            (click)="viewShop()"
+          >
+            SHOP NOW
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

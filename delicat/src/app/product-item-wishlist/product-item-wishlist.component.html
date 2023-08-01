@@ -1,0 +1,50 @@
+<div class="item__container d-flex flex-column">
+  <div
+    class="item d-flex flex-column"
+    (click)="viewProductDetail(productDetail)"
+  >
+    <img
+      alt=""
+      class="itemImg"
+      [src]="productDetail.imgURL[0]"
+      loading="lazy"
+    />
+
+    <div class="price__item">
+      <span>${{ productDetail.price }}.00</span>
+    </div>
+  </div>
+
+  <div class="btn-wishlist" (click)="removeWishlist(productDetail.id)">
+    <a>
+      <i class="bi bi-trash btn-un-hover"></i>
+      <i class="bi bi-trash-fill btn-hover"></i>
+    </a>
+  </div>
+
+  <div class="info__item">
+    <p class="describe__item">{{ productDetail.name }}</p>
+
+    <div class="rating__item d-flex flex-row">
+      <div class="star">
+        <i
+          *ngFor="let i of ratingStar"
+          class="bi bi-star-fill"
+          id="starYellow"
+        ></i>
+
+        <i
+          *ngFor="let i of ratingStarGray"
+          class="bi bi-star-fill"
+          id="starGray"
+        ></i>
+      </div>
+
+      <div class="reviews">
+        <p class="number__reviews">
+          {{ countReviews + " reviews" }}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

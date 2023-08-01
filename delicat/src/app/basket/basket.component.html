@@ -1,0 +1,55 @@
+<div class="container-basket">
+  <nav aria-label="breadcrumb" style="padding: 12px 0" class="bg-secondary">
+    <ol class="breadcrumb" style="margin-left: 85px; margin-bottom: 0">
+      <li class="breadcrumb-item"><a href="">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="cart">My basket</li>
+    </ol>
+  </nav>
+
+  <div class="basket__cover">
+    <div class="cover__img">
+      <img src="../../assets/img/cover.png" alt="" />
+    </div>
+    <h1 class="cover__title uppercase">my basket</h1>
+  </div>
+
+  <div
+    class="container content-basket d-flex flex-grow-1 justify-content-between flex-row"
+  >
+    <div class="left-content flex-grow-1">
+      <p>
+        <strong>{{ totalItems }} items</strong>
+      </p>
+
+      <app-product-basket
+        *ngFor="let item of cartItems"
+        [cartItem]="item"
+      ></app-product-basket>
+    </div>
+
+    <div class="right-content">
+      <div class="bill__cover">
+        <div>
+          <p>Total: {{ totalItems }} items</p>
+          <p>${{ totalPrice }}.00</p>
+        </div>
+
+        <div>
+          <p>Standard delivery:</p>
+          <p>Free</p>
+        </div>
+
+        <hr />
+        <div>
+          <p><strong>Total to pay:</strong></p>
+          <p>${{ totalPrice }}.00</p>
+        </div>
+      </div>
+
+      <button type="button" class="btn btn-primary btn-pay" (click)="payment()">
+        PAY
+      </button>
+    </div>
+  </div>
+</div>
+<!-- </div> -->

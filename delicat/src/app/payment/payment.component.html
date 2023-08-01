@@ -1,0 +1,273 @@
+<div class="container__payment">
+  <div class="container">
+    <nav aria-label="breadcrumb" style="padding-top: 12px">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="">Home</a></li>
+        <li class="breadcrumb-item"><a href="basket">My basket</a></li>
+        <li class="breadcrumb-item active" aria-current="payment">Payment</li>
+      </ol>
+    </nav>
+
+    <div class="title">
+      <h1>PAYMENT</h1>
+    </div>
+
+    <div class="content d-flex flex-grow-1">
+      <div class="left__content flex-grow-1">
+        <form action="#" class="row g-3" id="form_infor" dmethod="POST">
+          <p
+            class="form-biglable"
+            style="color: var(--bs-info); font-weight: 500"
+          >
+            YOUR INFORMATION
+          </p>
+          <div class="col-md-12">
+            <label for="inputFullName" class="form-label"
+              >Full Name <span>*</span></label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="inputFullName"
+              name="fullName"
+              [(ngModel)]="fullName"
+            />
+          </div>
+
+          <div class="col-md-12">
+            <label for="inputMobileNumber" class="form-label"
+              >Mobile Number <span>*</span></label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="inputMobileNumber"
+              name="phone"
+              [(ngModel)]="phone"
+            />
+          </div>
+
+          <div class="col-md-12">
+            <label for="inputAddressNumber" class="form-label"
+              >Address Number <span>*</span></label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="inputAddressNumber"
+              name="address"
+              [(ngModel)]="address"
+            />
+          </div>
+
+          <div
+            class="accordion"
+            id="accordionPanelsStayOpenExample1"
+            style="margin-top: 60px"
+          >
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                <button
+                  class="accordion-button btn-pay-with"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseOne"
+                  aria-expanded="true"
+                  aria-controls="panelsStayOpen-collapseOne"
+                  id="payWithVisaMaster"
+                >
+                  PAY WITH
+                  <img
+                    class="pay-with"
+                    src="../../assets/img/visa.svg"
+                    alt=""
+                  />
+                  <img
+                    class="pay-with"
+                    src="../../assets/img/mastercard.svg"
+                    alt=""
+                  />
+                </button>
+              </h2>
+              <div
+                id="panelsStayOpen-collapseOne"
+                class="accordion-collapse collapse show"
+                aria-labelledby="panelsStayOpen-headingOne"
+              >
+                <div class="accordion-body">
+                  <div class="mb-3">
+                    <label for="inputCardNumber" class="form-label"
+                      >Card Number <span>*</span></label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="inputCardNumber"
+                      placeholder="Card Number"
+                      required
+                    />
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <div class="col-md-4">
+                      <label for="inputExpiryDate" class="form-label"
+                        >Expiry Date <span>*</span></label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="inputExpiryDate"
+                      />
+                    </div>
+                    <div class="col-md-6">
+                      <label for="inputCVCCVV" class="form-label"
+                        >CVC / CVV <span>*</span></label
+                      >
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="inputCVCCVV"
+                      />
+                    </div>
+                  </div>
+                  <button
+                    type="button"
+                    class="btn w-100"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                    style="
+                      background-color: black;
+                      color: white;
+                      margin-top: 20px;
+                    "
+                    (click)="setOrderToSave('Credit Card')"
+                  >
+                    Pay ${{ totalPrice }}.00
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="accordion"
+            id="accordionPanelsStayOpenExample2"
+            style="margin-top: 60px"
+          >
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                <button
+                  class="accordion-button btn-pay-with"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseTwo"
+                  aria-expanded="true"
+                  aria-controls="panelsStayOpen-collapseTwo"
+                  id="payWithPayPal"
+                >
+                  PAY WITH
+                  <img
+                    class="pay-with"
+                    src="../../assets/img/paypal.svg"
+                    alt=""
+                  />
+                </button>
+              </h2>
+              <div
+                id="panelsStayOpen-collapseTwo"
+                class="accordion-collapse collapse show"
+                aria-labelledby="panelsStayOpen-headingOne"
+              >
+                <div class="accordion-body">
+                  <button
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                    type="button"
+                    class="btn w-100"
+                    style="
+                      background-color: black;
+                      color: white;
+                      margin-top: 20px;
+                    "
+                    (click)="setOrderToSave('Paypal')"
+                  >
+                    Pay with Paypal
+                    <img
+                      class="pay-with"
+                      src="../../assets/img/paypal.svg"
+                      alt=""
+                    />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="right__content">
+        <div class="bill__cover bg-white">
+          <div>
+            <p>Total: {{ totalItems }} items</p>
+            <p>${{ totalPrice }}.00</p>
+          </div>
+
+          <div>
+            <p>Standard delivery:</p>
+            <p>Free</p>
+          </div>
+
+          <hr />
+          <div>
+            <p>
+              <strong>Total to pay: </strong>
+            </p>
+            <p>${{ totalPrice }}.00</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content bg-secondary" style="padding: 0 30px">
+      <div class="modal-header justify-content-center flex-column">
+        <i
+          class="bi bi-check-circle-fill"
+          style="color: var(--bs-primary); font-size: 100px"
+        ></i>
+        <p style="font-weight: 700; font-size: 24px">Payment Success</p>
+      </div>
+      <div class="modal-body">
+        <div class="bill__cover bg-secondary">
+          <!-- <div>
+            <p>Total: {{ totalItems }} items</p>
+            <p style="font-weight: 700">${{ totalPrice }}.00</p>
+          </div> -->
+
+          <div>
+            <p>Appox:</p>
+            <p style="font-weight: 700">5-7 days</p>
+          </div>
+
+          <button
+            type="button"
+            class="btn btn-primary btn-view-order w-50"
+            (click)="
+              viewOrder(customerInfo.order[customerInfo.order.length - 1])
+            "
+          >
+            View Order
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

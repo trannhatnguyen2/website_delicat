@@ -1,0 +1,95 @@
+.container {
+  margin-top: 40px;
+  margin-bottom: 60px;
+}
+
+.signup__form {
+  max-width: 500px;
+  min-width: 300px;
+  max-height: 700px;
+  width: 30%;
+  height: 60%;
+  margin: auto;
+}
+
+.form-header {
+  text-align: center;
+  padding: 0.5rem 0;
+  margin: 0;
+}
+
+.form-label span {
+  color: red;
+}
+
+.form-control {
+  background-color: var(--bs-secondary);
+}
+
+.form-login {
+  text-align: center;
+  padding: 1rem 0;
+  margin: 0;
+}
+
+.btn-register {
+  text-align: center;
+  margin: 0.5rem auto;
+  padding: 0.5rem 3rem;
+  display: block;
+  color: white;
+  background-color: black;
+  letter-spacing: 1.15px;
+}
+
+.division {
+  float: none;
+  margin: 0 auto 18px;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+.division .line {
+  border-top: 1px solid black;
+  position: absolute;
+  top: 10px;
+  width: 34%;
+}
+
+.division .line.l {
+  left: 0;
+}
+
+.division .line.r {
+  right: 0;
+}
+
+.division span {
+  color: black;
+  font-size: 17px;
+}
+
+.form-social-button {
+  background-color: lightgray;
+  text-align: center;
+  padding: 0.2rem;
+}
+
+.social-button {
+  text-decoration: none;
+  color: black;
+}
+
+.social-button img {
+  width: 10%;
+  height: 10%;
+  margin-right: 0.5rem;
+}
+
+@media screen and (max-width: 600px) {
+  .btn-register {
+    width: 100%;
+  }
+}

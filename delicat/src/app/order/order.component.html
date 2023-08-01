@@ -1,0 +1,75 @@
+<div class="container-basket">
+  <nav aria-label="breadcrumb" style="padding: 12px 0" class="bg-secondary">
+    <ol class="breadcrumb" style="margin-left: 85px; margin-bottom: 0">
+      <li class="breadcrumb-item"><a href="">Home</a></li>
+      <li class="breadcrumb-item"><a href="user/profile">Account</a></li>
+      <li class="breadcrumb-item active" aria-current="cart">Order</li>
+    </ol>
+  </nav>
+
+  <div class="basket__cover">
+    <div class="cover__img">
+      <img src="../../assets/img/cover.png" alt="" />
+    </div>
+    <h1 class="cover__title uppercase">my order</h1>
+  </div>
+
+  <div
+    class="container content-basket d-flex flex-grow-1 justify-content-between flex-row"
+  >
+    <div class="left-content flex-grow-1">
+      <p>
+        <strong>{{ totalItems }} items</strong>
+      </p>
+      <app-order-item-detail
+        *ngFor="let item of orderDetail.saleProducts"
+        [orderItem]="item"
+      ></app-order-item-detail>
+    </div>
+
+    <div class="right-content">
+      <div class="bill__cover">
+        <div style="color: gray">
+          <p>Customer:</p>
+          <p>{{ customerInfo.fullName }}</p>
+        </div>
+
+        <div style="color: gray">
+          <p>Phone number:</p>
+          <p>{{ customerInfo.phone }}</p>
+        </div>
+
+        <div style="color: gray; margin-bottom: 0px">
+          <p style="margin-bottom: 0px">Address:</p>
+          <div class="address">
+            <p>{{ orderDetail.deliveryAddress }}</p>
+          </div>
+        </div>
+        <hr />
+
+        <div style="color: gray">
+          <p>Total: {{ totalItems }} items</p>
+          <p>${{ orderDetail.total }}.00</p>
+        </div>
+
+        <div style="color: gray">
+          <p>Payment method:</p>
+          <p>{{ orderDetail.paymentMethod }}</p>
+        </div>
+
+        <div style="color: gray">
+          <p>Standard delivery:</p>
+          <p>Free</p>
+        </div>
+
+        <hr />
+        <div>
+          <p><strong>Total to pay:</strong></p>
+          <p>
+            <strong>${{ orderDetail.total }}.00</strong>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

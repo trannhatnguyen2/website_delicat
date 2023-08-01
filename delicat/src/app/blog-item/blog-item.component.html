@@ -1,0 +1,11 @@
+<div class="content__item" (click)="viewBlogDetail(blogItem.id)">
+  <div class="item__img">
+    <img [src]="blogItem.img" alt="" />
+  </div>
+  <div class="item__date">
+    <div class="date">{{ blogItem.date }}</div>
+  </div>
+  <div class="item__title">
+    <h5 class="title">{{ blogItem.title }}</h5>
+  </div>
+</div>

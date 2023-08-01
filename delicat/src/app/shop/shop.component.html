@@ -1,0 +1,608 @@
+<div class="container">
+  <nav aria-label="breadcrumb" style="padding-top: 12px">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="shop">Shop</li>
+    </ol>
+  </nav>
+
+  <h2 class="text-center">SHOP</h2>
+  <div class="body__shop d-flex">
+    <div class="left__filter d-flex flex-column">
+      <div class="accordion" id="accordionPanelsStayOpenExample">
+        <!--Suit-->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapseOne"
+              aria-expanded="true"
+              aria-controls="panelsStayOpen-collapseOne"
+            >
+              SUITS
+            </button>
+          </h2>
+          <div
+            id="panelsStayOpen-collapseOne"
+            class="accordion-collapse collapse"
+            aria-labelledby="panelsStayOpen-headingOne"
+            [ngClass]="{ show: checkSize }"
+          >
+            <div class="accordion-body">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckChecked-Suits"
+                  (click)="filter($event, 'suits', 'tag')"
+                />
+                <label class="form-check-label" for="flexCheckChecked-Suits">
+                  Suits
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckChecked-Blazers"
+                  (click)="filter($event, 'blazers', 'tag')"
+                />
+                <label class="form-check-label" for="flexCheckChecked-Blazers">
+                  Blazers
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckChecked-Shirts"
+                  (click)="filter($event, 'shirts', 'tag')"
+                />
+                <label class="form-check-label" for="flexCheckChecked-Shirts">
+                  Shirts
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckChecked-Trousers"
+                  (click)="filter($event, 'trousers', 'tag')"
+                />
+                <label class="form-check-label" for="flexCheckChecked-Trousers">
+                  Trousers
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--Accessories-->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapseTwo"
+              aria-expanded="true"
+              aria-controls="panelsStayOpen-collapseTwo"
+            >
+              ACCESSORIES
+            </button>
+          </h2>
+          <div
+            id="panelsStayOpen-collapseTwo"
+            class="accordion-collapse collapse"
+            aria-labelledby="panelsStayOpen-headingTwo"
+            [ngClass]="{ show: checkSize }"
+          >
+            <div class="accordion-body">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckDefault-Shoes"
+                  (click)="filter($event, 'shoes', 'tag')"
+                />
+                <label class="form-check-label" for="flexCheckDefault-Shoes">
+                  Shoes
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckDefault-Ties"
+                  (click)="filter($event, 'ties', 'tag')"
+                />
+                <label class="form-check-label" for="flexCheckDefault-Ties">
+                  Ties
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckDefault-Belts"
+                  (click)="filter($event, 'belts', 'tag')"
+                />
+                <label class="form-check-label" for="flexCheckDefault-Belts">
+                  Belts
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckDefault-Hats"
+                  (click)="filter($event, 'hats', 'tag')"
+                />
+                <label class="form-check-label" for="flexCheckDefault-Hats">
+                  Hats
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckDefault-Scarves"
+                  (click)="filter($event, 'scarves', 'tag')"
+                />
+                <label class="form-check-label" for="flexCheckDefault-Scarves">
+                  Scarves
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--Size-->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapseThree"
+              aria-expanded="true"
+              aria-controls="panelsStayOpen-collapseThree"
+            >
+              SIZE
+            </button>
+          </h2>
+          <div
+            id="panelsStayOpen-collapseThree"
+            class="accordion-collapse collapse"
+            aria-labelledby="panelsStayOpen-headingThree"
+            [ngClass]="{ show: checkSize }"
+          >
+            <div class="accordion-body d-flex flex-wrap justify-content-evenly">
+              <div>
+                <input
+                  type="checkbox"
+                  class="btn-check"
+                  id="btn-check-2-outlined-S"
+                  autocomplete="off"
+                  (click)="filter($event, 'S', 'size')"
+                />
+                <label
+                  class="btn btn-outline-primary"
+                  for="btn-check-2-outlined-S"
+                  >S</label
+                >
+              </div>
+
+              <div>
+                <input
+                  type="checkbox"
+                  class="btn-check"
+                  id="btn-check-2-outlined-M"
+                  autocomplete="off"
+                  (click)="filter($event, 'M', 'size')"
+                />
+                <label
+                  class="btn btn-outline-primary"
+                  for="btn-check-2-outlined-M"
+                  >M</label
+                >
+              </div>
+
+              <div>
+                <input
+                  type="checkbox"
+                  class="btn-check"
+                  id="btn-check-2-outlined-L"
+                  autocomplete="off"
+                  (click)="filter($event, 'L', 'size')"
+                />
+                <label
+                  class="btn btn-outline-primary"
+                  for="btn-check-2-outlined-L"
+                  >L</label
+                >
+              </div>
+
+              <div>
+                <input
+                  type="checkbox"
+                  class="btn-check"
+                  id="btn-check-2-outlined-XL"
+                  autocomplete="off"
+                  (click)="filter($event, 'XL', 'size')"
+                />
+                <label
+                  class="btn btn-outline-primary"
+                  for="btn-check-2-outlined-XL"
+                  >XL</label
+                >
+              </div>
+
+              <div>
+                <input
+                  type="checkbox"
+                  class="btn-check"
+                  id="btn-check-2-outlined-XXL"
+                  autocomplete="off"
+                  (click)="filter($event, 'XXL', 'size')"
+                />
+                <label
+                  class="btn btn-outline-primary"
+                  for="btn-check-2-outlined-XXL"
+                  >XXL</label
+                >
+              </div>
+
+              <div>
+                <input
+                  type="checkbox"
+                  class="btn-check"
+                  id="btn-check-2-outlined-XXXL"
+                  autocomplete="off"
+                  (click)="filter($event, 'XXXL', 'size')"
+                />
+                <label
+                  class="btn btn-outline-primary"
+                  for="btn-check-2-outlined-XXXL"
+                  >XXXL</label
+                >
+              </div>
+            </div>
+            <hr />
+            <div class="accordion-body d-flex flex-wrap justify-content-evenly">
+              <div>
+                <input
+                  type="checkbox"
+                  class="btn-check"
+                  id="btn-check-2-outlined-6"
+                  autocomplete="off"
+                  (click)="filter($event, '6', 'size')"
+                />
+                <label
+                  class="btn btn-outline-primary"
+                  for="btn-check-2-outlined-6"
+                  >6</label
+                >
+              </div>
+
+              <div>
+                <input
+                  type="checkbox"
+                  class="btn-check"
+                  id="btn-check-2-outlined-7"
+                  autocomplete="off"
+                  (click)="filter($event, '7', 'size')"
+                />
+                <label
+                  class="btn btn-outline-primary"
+                  for="btn-check-2-outlined-7"
+                  >7</label
+                >
+              </div>
+
+              <div>
+                <input
+                  type="checkbox"
+                  class="btn-check"
+                  id="btn-check-2-outlined-8"
+                  autocomplete="off"
+                  (click)="filter($event, '8', 'size')"
+                />
+                <label
+                  class="btn btn-outline-primary"
+                  for="btn-check-2-outlined-8"
+                  >8</label
+                >
+              </div>
+
+              <div>
+                <input
+                  type="checkbox"
+                  class="btn-check"
+                  id="btn-check-2-outlined-9"
+                  autocomplete="off"
+                  (click)="filter($event, '9', 'size')"
+                />
+                <label
+                  class="btn btn-outline-primary"
+                  for="btn-check-2-outlined-9"
+                  >9</label
+                >
+              </div>
+
+              <div>
+                <input
+                  type="checkbox"
+                  class="btn-check"
+                  id="btn-check-2-outlined-10"
+                  autocomplete="off"
+                  (click)="filter($event, '10', 'size')"
+                />
+                <label
+                  class="btn btn-outline-primary"
+                  for="btn-check-2-outlined-10"
+                  >10</label
+                >
+              </div>
+
+              <div>
+                <input
+                  type="checkbox"
+                  class="btn-check"
+                  id="btn-check-2-outlined-11"
+                  autocomplete="off"
+                  (click)="filter($event, '11', 'size')"
+                />
+                <label
+                  class="btn btn-outline-primary"
+                  for="btn-check-2-outlined-11"
+                  >11</label
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--Colors-->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="panelsStayOpen-headingFour">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapseFour"
+              aria-expanded="true"
+              aria-controls="panelsStayOpen-collapseFour"
+            >
+              COLORS
+            </button>
+          </h2>
+          <div
+            id="panelsStayOpen-collapseFour"
+            class="accordion-collapse collapse"
+            aria-labelledby="panelsStayOpen-headingFour"
+            [ngClass]="{ show: checkSize }"
+          >
+            <div
+              class="accordion-body all__colors d-flex flex-wrap justify-content-between"
+            >
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckChecked-red"
+                  (click)="filter($event, 'red', 'color')"
+                />
+                <label class="form-check-label" for="flexCheckChecked-red">
+                  Red
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckChecked-cream"
+                  (click)="filter($event, 'cream', 'color')"
+                />
+                <label class="form-check-label" for="flexCheckChecked-cream">
+                  Cream
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckChecked-green"
+                  (click)="filter($event, 'green', 'color')"
+                />
+                <label class="form-check-label" for="flexCheckChecked-green">
+                  Green
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckChecked-brown"
+                  (click)="filter($event, 'brown', 'color')"
+                />
+                <label class="form-check-label" for="flexCheckChecked-brown">
+                  Brown
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckChecked-gray"
+                  (click)="filter($event, 'gray', 'color')"
+                />
+                <label class="form-check-label" for="flexCheckChecked-gray">
+                  Gray
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckChecked-navy"
+                  (click)="filter($event, 'navy', 'color')"
+                />
+                <label class="form-check-label" for="flexCheckChecked-navy">
+                  Navy
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--Price-->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="panelsStayOpen-headingFive">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapseFive"
+              aria-expanded="true"
+              aria-controls="panelsStayOpen-collapseFive"
+            >
+              PRICE
+            </button>
+          </h2>
+          <div
+            id="panelsStayOpen-collapseFive"
+            class="accordion-collapse collapse"
+            aria-labelledby="panelsStayOpen-headingFive"
+            [ngClass]="{ show: checkSize }"
+          >
+            <div class="accordion-body">
+              <div class="d-flex justify-content-between w-100">
+                <label id="" style="width: 30px">$0</label>
+                <input
+                  type="range"
+                  class="form-range"
+                  min="0"
+                  max="500"
+                  id="customRange1"
+                  value="500"
+                  oninput="rangeValue.innerText = '$' + this.value"
+                  style="padding: 0; width: 65%"
+                  data-slider-value="[0,500]"
+                  #priceFilter
+                  (change)="filterPrice(priceFilter.value)"
+                />
+
+                <label id="rangeValue" style="width: 30px">$500</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="right__all__items flex-grow-1">
+      <div class="d-flex header__right__content justify-content-end">
+        <!-- Sort By -->
+        <div class="dropdown sort__item text-end d-flex">
+          <button
+            class="btn btn-secondary dropdown-toggle"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Sort by
+          </button>
+
+          <ul class="dropdown-menu">
+            <li>
+              <button
+                class="dropdown-item"
+                type="button"
+                (click)="orderByPrice()"
+              >
+                Price Low to High
+              </button>
+            </li>
+            <li>
+              <button
+                class="dropdown-item"
+                type="button"
+                (click)="orderDescByPrice()"
+              >
+                Price High to Low
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Search -->
+      <div class="search__item input-group mb-3 d-flex justify-content-center">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Search product name..."
+          aria-label="Recipient's username"
+          aria-describedby="button-addon2"
+          name="search"
+          [(ngModel)]="searchProduct"
+        />
+        <button
+          class="btn btn-primary"
+          type="button"
+          id="button-addon2"
+          (click)="search()"
+        >
+          Search
+        </button>
+
+        <button
+          style="color: black"
+          class="btn btn-outline-secondary btn-secondary"
+          type="button"
+          (click)="resetItem()"
+        >
+          Reset
+        </button>
+      </div>
+
+      <div class="list__item d-flex flex-wrap">
+        <app-product-item
+          *ngFor="let item of templistItemsFinal"
+          [productDetail]="item"
+          [customerInfo]="customerInfo"
+        ></app-product-item>
+      </div>
+    </div>
+  </div>
+</div>
